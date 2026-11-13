@@ -110,6 +110,11 @@
   .chip { font-family: var(--mono); font-weight: 400; font-size: 10.5px; letter-spacing: .04em; padding: 1px 6px; border: 1px solid var(--line); border-radius: 3px; color: var(--ink-2); }
   .buy:has(input:checked) .t span.name { text-decoration: line-through; color: var(--muted); }
 
+  .looks.trio { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .lead-in { margin: 18px 0 0; max-width: 72ch; color: var(--ink-2); font-size: 15px; }
+  .tiers.four { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  @media (max-width: 1100px) { .tiers.four { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
   /* Причёски */
   .hair { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; margin-top: 22px; }
   .hair figure { margin: 0; display: grid; gap: 10px; align-content: start; min-width: 0; }
@@ -122,7 +127,7 @@
   @media (max-width: 920px) {
     .hair { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     header, .rules { grid-template-columns: 1fr; }
-    .looks, .tiers { grid-template-columns: 1fr; }
+    .looks, .looks.trio, .tiers, .tiers.four { grid-template-columns: 1fr; }
     .look { grid-template-columns: minmax(0, 300px) 1fr; grid-template-rows: none; }
   }
   @media (max-width: 640px) {
@@ -138,7 +143,7 @@
     <div>
       <p class="eyebrow">Разбор стилиста · 13 ноября 2026 · зима в Москве · прогулки, музеи, рестораны</p>
       <h1>Зимний гардероб <em>Эльвиры</em></h1>
-      <p class="lead">Задача: чтобы одежда считывалась как женственная и при этом выдерживала ежедневные долгие прогулки по зимней Москве. Женственность здесь дают не каблуки и не неудобство, а три вещи: отмеченная талия, мягкие фактуры и глубокий тёплый цвет у лица. Ниже палитра, правила, восемь образов вокруг ваших дублёнки и двух пуховиков, четыре причёски и список покупок.</p>
+      <p class="lead">Задача: чтобы одежда считывалась как женственная и при этом выдерживала ежедневные долгие прогулки по зимней Москве. Женственность здесь дают не каблуки и не неудобство, а три вещи: отмеченная талия, мягкие фактуры и глубокий тёплый цвет у лица. Ниже палитра, правила, восемь повседневных образов вокруг ваших дублёнки и двух пуховиков, три солидных и три смелых на выход, четыре причёски и список покупок.</p>
     </div>
     <ul class="facts">
       <li><b>Цветотип</b><span>Тёмная осень: тёмные волосы и глаза, тёпло-нейтральная кожа с веснушками, контраст выше среднего. Запасной вариант: тёмная зима, проверить драпировкой.</span></li>
@@ -362,6 +367,92 @@
   </section>
 
   <section>
+    <div class="sec-head"><h2>Солидно</h2><span class="count">приём, театр, важная встреча</span></div>
+    <p class="lead-in">Солидность дают длина, плотная ткань и цельный цвет: всё до пола или ниже колена, без складок, в одной гамме от головы до обуви. Украшения крупнее обычного, сумка с жёсткой формой. Мягкость остаётся в волосах и улыбке, иначе образ становится строгим, а не дорогим.</p>
+    <div class="looks trio">
+      <article class="look">
+        <figure class="photo"><img src="img/s1.jpg" alt="Эльвира у старинного особняка в длинном шоколадном пальто-халате до щиколотки с поясом, водолазке и брюках цвета слоновой кости, с коньячной сумкой с жёсткой ручкой" width="796" height="1200"><span class="num">С1</span><figcaption>День · −5…−10 °C</figcaption></figure>
+        <div class="body">
+          <div><h3>Пальто в пол</h3><p class="occasion">Важная встреча, школа, врач, обед с родителями.</p></div>
+          <ul class="items">
+            <li><i class="dot" style="background:#4E342E"></i><span>Пальто-халат до щиколотки, шерсть с кашемиром, с поясом</span></li>
+            <li><i class="dot" style="background:#F3EBDD"></i><span>Водолазка и широкие брюки в пол, слоновая кость</span></li>
+            <li><i class="dot" style="background:#9C5A32"></i><span>Коньячная сумка с жёсткой ручкой</span></li>
+          </ul>
+          <p class="why"><strong>Почему работает.</strong> Длина в пол и тон в тон, это язык «старых денег». Пояс сохраняет женственность.</p>
+        </div>
+      </article>
+      <article class="look">
+        <figure class="photo"><img src="img/s2.jpg" alt="Эльвира в лобби отеля в приталенном шоколадном брючном костюме с широкими брюками в пол, кремовой шёлковой блузе с бантом, с жемчугом и маленькой структурной сумкой" width="796" height="1200"><span class="num">С2</span><figcaption>Приём · в помещении</figcaption></figure>
+        <div class="body">
+          <div><h3>Шоколадный костюм и бант</h3><p class="occasion">Деловой обед, приём, официальное событие.</p></div>
+          <ul class="items">
+            <li><i class="dot" style="background:#4E342E"></i><span>Приталенный жакет и брюки в пол, шоколадная шерсть</span></li>
+            <li><i class="dot" style="background:#F3EBDD"></i><span>Шёлковая блуза с бантом, слоновая кость</span></li>
+            <li><i class="dot" style="background:#EDE3D2"></i><span>Жемчуг, замшевые лодочки, низкий пучок</span></li>
+          </ul>
+          <p class="why"><strong>Почему работает.</strong> Шоколад солиднее чёрного и мягче к её лицу. Бант не даёт костюму стать офисным.</p>
+        </div>
+      </article>
+      <article class="look">
+        <figure class="photo"><img src="img/s3.jpg" alt="Эльвира вечером у колоннады театра в бордовом платье-футляре миди и длинном пальто цвета эспрессо, накинутом на плечи, с клатчем и в лодочках" width="796" height="1200"><span class="num">С3</span><figcaption>Театр · вечер</figcaption></figure>
+        <div class="body">
+          <div><h3>Бордовый футляр</h3><p class="occasion">Театр, юбилей, ужин с партнёрами мужа.</p></div>
+          <ul class="items">
+            <li><i class="dot" style="background:#6B2333"></i><span>Платье-футляр миди из плотного крепа, вырез-лодочка</span></li>
+            <li><i class="dot" style="background:#3B2A22"></i><span>Длинное пальто эспрессо, накинуто на плечи</span></li>
+            <li><i class="dot" style="background:#C9A55C"></i><span>Серьги-капли, клатч, голливудская волна</span></li>
+          </ul>
+          <p class="why"><strong>Почему работает.</strong> Один глубокий цвет на всю длину и чёткий силуэт. Пальто на плечах выглядит увереннее, чем надетое.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><h2>Ещё чика</h2><span class="count">свидание, бар, вечеринка</span></div>
+    <p class="lead-in">Молодит не короткое, а смелая деталь при спокойном остальном: кожа, разрез, открытые ключицы, бретели, мех. Правило одно: одна смелая вещь на образ. Длины остаются миди, цвета её, поэтому выглядит дерзко, но не вульгарно.</p>
+    <div class="looks trio">
+      <article class="look">
+        <figure class="photo"><img src="img/c1.jpg" alt="Эльвира идёт по зимней улице в шоколадной кожаной юбке-миди с разрезом, облегающем терракотовом джемпере, короткой дублёнке-авиаторе и высоких сапогах" width="796" height="1200"><span class="num">Ч1</span><figcaption>Город · день</figcaption></figure>
+        <div class="body">
+          <div><h3>Кожа и разрез</h3><p class="occasion">Прогулка, бранч, шопинг.</p></div>
+          <ul class="items">
+            <li><i class="dot" style="background:#3B2A22"></i><span>Кожаная юбка-миди с разрезом спереди</span></li>
+            <li><i class="dot" style="background:#B5573B"></i><span>Облегающий терракотовый джемпер, заправлен</span></li>
+            <li><i class="dot" style="background:#5A3E2E"></i><span>Дублёнка-авиатор <span class="own">или ваша</span>, сапоги 6 см</span></li>
+          </ul>
+          <p class="why"><strong>Почему работает.</strong> Кожа и разрез дают дерзость, а длина миди и тёплый цвет оставляют образ взрослым.</p>
+        </div>
+      </article>
+      <article class="look">
+        <figure class="photo"><img src="img/c2.jpg" alt="Эльвира в коктейль-баре в бордовом бархатном корсетном топе на тонких бретелях, широких брюках цвета слоновой кости и пиджаке эспрессо на плечах, с клатчем" width="796" height="1200"><span class="num">Ч2</span><figcaption>Бар · вечер</figcaption></figure>
+        <div class="body">
+          <div><h3>Бархатный корсет</h3><p class="occasion">Бар, день рождения подруги, свидание.</p></div>
+          <ul class="items">
+            <li><i class="dot" style="background:#6B2333"></i><span>Бархатный корсетный топ на бретелях, бордо</span></li>
+            <li><i class="dot" style="background:#F3EBDD"></i><span>Широкие брюки в пол, слоновая кость</span></li>
+            <li><i class="dot" style="background:#3B2A22"></i><span>Пиджак оверсайз на плечах, лодочки, укладка 90-х</span></li>
+          </ul>
+          <p class="why"><strong>Почему работает.</strong> Корсет отмечает талию и открывает ключицы, широкие брюки и пиджак уравновешивают.</p>
+        </div>
+      </article>
+      <article class="look">
+        <figure class="photo"><img src="img/c3.jpg" alt="Эльвира смеётся на праздничной улице вечером в шоколадном атласном платье-комбинации миди, короткой шубке из искусственного меха нараспашку и ботильонах" width="796" height="1200"><span class="num">Ч3</span><figcaption>Праздник · ночь</figcaption></figure>
+        <div class="body">
+          <div><h3>Комбинация и шубка</h3><p class="occasion">Новый год, вечеринка, ужин вдвоём.</p></div>
+          <ul class="items">
+            <li><i class="dot" style="background:#3B2A22"></i><span>Атласное платье-комбинация миди, шоколад</span></li>
+            <li><i class="dot" style="background:#4E342E"></i><span>Короткая шубка из искусственного меха</span></li>
+            <li><i class="dot" style="background:#3B2A22"></i><span>Тонкие колготки, ботильоны 6 см, серьги-капли</span></li>
+          </ul>
+          <p class="why"><strong>Почему работает.</strong> Атлас и мех вместе выглядят праздничнее блёсток. Тон в тон делает смелое платье дорогим.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section>
     <div class="sec-head"><h2>Причёски</h2><span class="count">на ту же стрижку, без смены длины</span></div>
     <div class="hair">
       <figure>
@@ -387,9 +478,9 @@
   <section>
     <div class="sec-head">
       <h2>Купить этой зимой</h2>
-      <span class="count" id="count">Куплено 0 из 18</span>
+      <span class="count" id="count">Куплено 0 из 26</span>
     </div>
-    <div class="tiers">
+    <div class="tiers four">
       <div class="tier">
         <h4>Сначала, недорого</h4>
         <p>Меняют то, что уже есть: пуховики становятся женственными.</p>
@@ -419,6 +510,18 @@
         <label class="buy"><input type="checkbox" id="b-satin" data-id="satin"><span><span class="t"><i class="dot" style="background:#EDE3D2"></i><span class="name">Атласная юбка-миди</span><span class="chip">8</span></span><small>По косой, слоновая кость или шоколад. Днём с сапогами, вечером с лодочками.</small></span></label>
         <label class="buy"><input type="checkbox" id="b-coat" data-id="coat"><span><span class="t"><i class="dot" style="background:#B5835A"></i><span class="name">Пальто-халат кэмел</span><span class="chip">6</span></span><small>Шерсть с кашемиром, с поясом, ниже колена. На сухие дни до −5 °C.</small></span></label>
         <label class="buy"><input type="checkbox" id="b-pumps" data-id="pumps"><span><span class="t"><i class="dot" style="background:#3B2A22"></i><span class="name">Замшевые лодочки</span><span class="chip">5</span></span><small>Шоколад, каблук 5 см, скруглённый нос.</small></span></label>
+      </div>
+      <div class="tier">
+        <h4>Солидно и чика</h4>
+        <p>По желанию, когда захочется нового настроения.</p>
+        <label class="buy"><input type="checkbox" id="b-longcoat" data-id="longcoat"><span><span class="t"><i class="dot" style="background:#4E342E"></i><span class="name">Пальто-халат до щиколотки</span><span class="chip">С1</span></span><small>Шоколад, шерсть с кашемиром.</small></span></label>
+        <label class="buy"><input type="checkbox" id="b-suit" data-id="suit"><span><span class="t"><i class="dot" style="background:#4E342E"></i><span class="name">Шоколадный брючный костюм</span><span class="chip">С2</span></span><small>Приталенный жакет, брюки в пол.</small></span></label>
+        <label class="buy"><input type="checkbox" id="b-bowblouse" data-id="bowblouse"><span><span class="t"><i class="dot" style="background:#F3EBDD"></i><span class="name">Шёлковая блуза с бантом</span><span class="chip">С2</span></span><small>Слоновая кость.</small></span></label>
+        <label class="buy"><input type="checkbox" id="b-sheath" data-id="sheath"><span><span class="t"><i class="dot" style="background:#6B2333"></i><span class="name">Платье-футляр бордо</span><span class="chip">С3</span></span><small>Плотный креп, миди, вырез-лодочка.</small></span></label>
+        <label class="buy"><input type="checkbox" id="b-leather" data-id="leather"><span><span class="t"><i class="dot" style="background:#3B2A22"></i><span class="name">Кожаная юбка-миди с разрезом</span><span class="chip">Ч1</span></span><small>Шоколад, мягкая матовая кожа.</small></span></label>
+        <label class="buy"><input type="checkbox" id="b-corset" data-id="corset"><span><span class="t"><i class="dot" style="background:#6B2333"></i><span class="name">Бархатный корсетный топ</span><span class="chip">Ч2</span></span><small>Бордо, на бретелях.</small></span></label>
+        <label class="buy"><input type="checkbox" id="b-slip" data-id="slip"><span><span class="t"><i class="dot" style="background:#3B2A22"></i><span class="name">Атласное платье-комбинация</span><span class="chip">Ч3</span></span><small>Шоколад или бутылочный зелёный, миди.</small></span></label>
+        <label class="buy"><input type="checkbox" id="b-fur" data-id="fur"><span><span class="t"><i class="dot" style="background:#4E342E"></i><span class="name">Короткая шубка</span><span class="chip">Ч3</span></span><small>Искусственный мех, шоколад.</small></span></label>
       </div>
     </div>
   </section>
