@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow,noimageindex">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}</style>
+</head>
+<body>
+<title>Зимний гардероб Эльвиры</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Manrope:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  /* Layout: журнальная колонка; палитра как ряд образцов ткани, образы парами по поводам */
+  :root {
+    --bg: #F4EEEB; --surface: #FBF8F6; --ink: #2E2320; --ink-2: #6A5852;
+    --muted: #978680; --line: #E2D7D2; --accent: #2F5D46; --accent-soft: #E1EAE3;
+    --warn: #8E3A2C;
+    --serif: "Bodoni Moda", "Didot", Georgia, serif;
+    --sans: "Manrope", "Helvetica Neue", Arial, sans-serif;
+    --mono: "IBM Plex Mono", "SFMono-Regular", Menlo, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #1E1917; --surface: #27201D; --ink: #EFE7E2; --ink-2: #C3B4AD;
+      --muted: #94857F; --line: #3A302C; --accent: #8DBFA2; --accent-soft: #24332B;
+      --warn: #E08A75; color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #1E1917; --surface: #27201D; --ink: #EFE7E2; --ink-2: #C3B4AD;
+    --muted: #94857F; --line: #3A302C; --accent: #8DBFA2; --accent-soft: #24332B;
+    --warn: #E08A75; color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--sans); font-size: 15px; line-height: 1.55; -webkit-font-smoothing: antialiased; }
+  .page { max-width: 1180px; margin: 0 auto; padding-block: 40px 64px; padding-left: max(28px, env(safe-area-inset-left, 0px)); padding-right: max(28px, env(safe-area-inset-right, 0px)); display: grid; gap: 52px; }
+
+  .eyebrow { font-family: var(--mono); font-size: 11.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin: 0 0 12px; }
+  h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(38px, 5.4vw, 64px); line-height: 1.02; letter-spacing: -.01em; margin: 0 0 16px; text-wrap: balance; }
+  h1 em { font-style: italic; color: var(--accent); }
+  h2 { font-family: var(--serif); font-weight: 400; font-size: 30px; line-height: 1.12; margin: 0; text-wrap: balance; }
+  h3 { font-family: var(--serif); font-weight: 400; font-size: 25px; line-height: 1.12; margin: 0 0 4px; text-wrap: balance; }
+
+  header { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 28px 48px; align-items: start; padding-bottom: 34px; border-bottom: 1px solid var(--line); }
+  header p.lead { margin: 0; max-width: 60ch; color: var(--ink-2); font-size: 16px; }
+  .facts { margin: 0; padding: 0; list-style: none; display: grid; }
+  .facts li { display: grid; grid-template-columns: 96px 1fr; gap: 12px; padding: 10px 0; border-top: 1px solid var(--line); font-size: 14px; }
+  .facts li:first-child { border-top: 0; padding-top: 0; }
+  .facts b { font-family: var(--mono); font-weight: 400; font-size: 11.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); padding-top: 3px; }
+
+  .sec-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 24px; padding-bottom: 14px; border-bottom: 1px solid var(--line); }
+  .count { font-family: var(--mono); font-size: 13px; color: var(--ink-2); font-variant-numeric: tabular-nums; }
+
+  /* Палитра */
+  .palette { display: grid; gap: 26px; margin-top: 22px; }
+  .row-label { display: flex; flex-wrap: wrap; gap: 4px 14px; align-items: baseline; margin: 0 0 10px; }
+  .row-label h4 { margin: 0; font-family: var(--mono); font-weight: 500; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); }
+  .row-label span { font-size: 13px; color: var(--ink-2); }
+  .swatches { display: grid; grid-template-columns: repeat(auto-fill, minmax(118px, 1fr)); gap: 12px; }
+  .sw { margin: 0; display: grid; gap: 6px; }
+  .chip-c { height: 74px; border-radius: 3px; border: 1px solid rgba(128,110,100,.25); position: relative; }
+  .sw figcaption { font-size: 13px; line-height: 1.3; }
+  .sw code { display: block; font-family: var(--mono); font-size: 11.5px; color: var(--muted); }
+  .avoid .chip-c::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top right, transparent calc(50% - 1px), var(--warn) 50%, transparent calc(50% + 1px)); }
+  .avoid .row-label h4 { color: var(--warn); }
+  .check { margin: 0; padding: 14px 16px; background: var(--accent-soft); border-radius: 4px; font-size: 14px; max-width: 86ch; }
+  .check strong { color: var(--accent); font-weight: 600; }
+
+  /* Правила */
+  .rules { display: grid; grid-template-columns: 240px 1fr; gap: 20px 48px; }
+  .rules ul { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 32px; }
+  .rules li { font-size: 14px; color: var(--ink-2); padding-left: 16px; position: relative; max-width: 46ch; }
+  .rules li::before { content: ""; position: absolute; left: 0; top: 9px; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+  .rules li b { color: var(--ink); font-weight: 600; }
+
+  /* Образы */
+  .looks { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; margin-top: 22px; }
+  .intro { align-self: start; display: grid; gap: 12px; padding: 4px 0; }
+  .intro p { margin: 0; color: var(--ink-2); font-size: 15px; max-width: 46ch; }
+  .intro p.eyebrow { color: var(--accent); }
+  .look { background: var(--surface); border: 1px solid var(--line); border-radius: 4px; overflow: hidden; display: grid; grid-template-rows: auto 1fr; min-width: 0; }
+  .photo { position: relative; margin: 0; background: var(--line); aspect-ratio: 2 / 3; max-width: 100%; }
+  .photo img { display: block; width: 100%; height: 100%; object-fit: cover; }
+  .photo figcaption { position: absolute; left: 12px; bottom: 12px; padding: 4px 9px; border-radius: 3px; background: rgba(30,25,23,.72); color: #F4EEEB; font-family: var(--mono); font-size: 11.5px; letter-spacing: .04em; }
+  .photo .num { position: absolute; top: 6px; right: 14px; font-family: var(--serif); font-style: italic; font-size: 34px; color: #FBF8F6; text-shadow: 0 1px 6px rgba(0,0,0,.45); }
+  .body { padding: 20px 22px 24px; display: grid; gap: 16px; align-content: start; }
+  .occasion { margin: 0; color: var(--ink-2); font-size: 14px; }
+  .items { margin: 0; padding: 0; list-style: none; display: grid; }
+  .items li { display: grid; grid-template-columns: 14px 1fr; gap: 10px; padding: 8px 0; border-top: 1px solid var(--line); font-size: 14px; }
+  .items li:first-child { border-top: 0; padding-top: 0; }
+  .dot { display: block; width: 14px; height: 14px; border-radius: 50%; margin-top: 4px; border: 1px solid rgba(128,110,100,.35); }
+  .own { font-family: var(--mono); font-size: 10.5px; letter-spacing: .04em; color: var(--accent); white-space: nowrap; }
+  .why { margin: 0; padding: 12px 14px; background: var(--accent-soft); border-radius: 4px; font-size: 13.5px; }
+  .why strong { color: var(--accent); font-weight: 600; }
+  .note { margin: 14px 0 0; font-size: 13px; color: var(--muted); max-width: 86ch; }
+
+  /* Покупки */
+  .tiers { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; margin-top: 20px; }
+  .tier { min-width: 0; }
+  .tier h4 { margin: 0 0 2px; font-family: var(--mono); font-weight: 500; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); }
+  .tier > p { margin: 0 0 10px; font-size: 13px; color: var(--ink-2); }
+  .buy { display: grid; grid-template-columns: 22px 1fr; gap: 12px; padding: 12px 0; border-top: 1px solid var(--line); cursor: pointer; }
+  .buy input { width: 20px; height: 20px; margin: 2px 0 0; accent-color: var(--accent); cursor: pointer; }
+  .buy input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .buy .t { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; font-weight: 600; font-size: 14.5px; }
+  .buy .t .dot { margin-top: 0; }
+  .buy small { display: block; margin-top: 3px; color: var(--ink-2); font-size: 13px; }
+  .chip { font-family: var(--mono); font-weight: 400; font-size: 10.5px; letter-spacing: .04em; padding: 1px 6px; border: 1px solid var(--line); border-radius: 3px; color: var(--ink-2); }
+  .buy:has(input:checked) .t span.name { text-decoration: line-through; color: var(--muted); }
+
+  /* Причёски */
+  .hair { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; margin-top: 22px; }
+  .hair figure { margin: 0; display: grid; gap: 10px; align-content: start; min-width: 0; }
+  .hair .ph { aspect-ratio: 3 / 4; max-width: 100%; background: var(--line); border-radius: 4px; overflow: hidden; }
+  .hair img { display: block; width: 100%; height: 100%; object-fit: cover; }
+  .hair figcaption { display: grid; gap: 4px; font-size: 13.5px; color: var(--ink-2); }
+  .hair figcaption b { font-family: var(--serif); font-weight: 400; font-size: 20px; color: var(--ink); }
+  .hair figcaption i { font-style: normal; font-family: var(--mono); font-size: 11px; letter-spacing: .05em; text-transform: uppercase; color: var(--accent); }
+
+  @media (max-width: 920px) {
+    .hair { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    header, .rules { grid-template-columns: 1fr; }
+    .looks, .tiers { grid-template-columns: 1fr; }
+    .look { grid-template-columns: minmax(0, 300px) 1fr; grid-template-rows: none; }
+  }
+  @media (max-width: 640px) {
+    .page { padding-block: 28px 48px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); gap: 40px; }
+    .look { grid-template-columns: 1fr; }
+    .rules ul { grid-template-columns: 1fr; }
+    .swatches { grid-template-columns: repeat(auto-fill, minmax(96px, 1fr)); }
+  }
+</style>
+
+<div class="page">
+  <header>
+    <div>
+      <p class="eyebrow">Разбор стилиста · 13 ноября 2026 · зима в Москве · прогулки, музеи, рестораны</p>
+      <h1>Зимний гардероб <em>Эльвиры</em></h1>
+      <p class="lead">Задача: чтобы одежда считывалась как женственная и при этом выдерживала ежедневные долгие прогулки по зимней Москве. Женственность здесь дают не каблуки и не неудобство, а три вещи: отмеченная талия, мягкие фактуры и глубокий тёплый цвет у лица. Ниже палитра, правила, восемь образов вокруг ваших дублёнки и двух пуховиков, четыре причёски и список покупок.</p>
+    </div>
+    <ul class="facts">
+      <li><b>Цветотип</b><span>Тёмная осень: тёмные волосы и глаза, тёпло-нейтральная кожа с веснушками, контраст выше среднего. Запасной вариант: тёмная зима, проверить драпировкой.</span></li>
+      <li><b>Фигура</b><span>Мягкие песочные часы, 166 см, тонкая кость, плавные линии. Талия видна, когда одежда её отмечает.</span></li>
+      <li><b>Стиль</b><span>Мягкий натурал как основа, романтик для выхода: кашемир, замша, шёлк, запах, жемчуг.</span></li>
+      <li><b>Мешает</b><span>Оверсайз сверху донизу, бледно-жёлтый и нюд у лица, укороченные широкие брюки, кеды в «нарядных» образах.</span></li>
+    </ul>
+  </header>
+
+  <section>
+    <div class="sec-head"><h2>Ваша палитра</h2><span class="count">16 цветов · 8 не у лица</span></div>
+    <div class="palette">
+      <div>
+        <div class="row-label"><h4>База</h4><span>Пальто, брюки, юбки, обувь, сумки</span></div>
+        <div class="swatches">
+          <figure class="sw"><div class="chip-c" style="background:#3B2A22"></div><figcaption>Эспрессо<code>#3B2A22</code></figcaption></figure>
+          <figure class="sw"><div class="chip-c" style="background:#4E342E"></div><figcaption>Тёмный шоколад<code>#4E342E</code></figcaption></figure>
+          <figure class="sw"><div class="chip-c" style="background:#B5835A"></div><figcaption>Кэмел<code>#B5835A</code></figcaption></figure>
+          <figure class="sw"><div class="chip-c" style="background:#A0826D"></div><figcaption>Кофе с молоком<code>#A0826D</code></figcaption></figure>
+          <figure class="sw"><div class="chip-c" style="background:#F3EBDD"></div><figcaption>Слоновая кость<code>#F3EBDD</code></figcaption></figure>
+          <figure class="sw"><div class="chip-c" style="background:#2B3A4F"></div><figcaption>Чернильный синий<code>#2B3A4F</code></figcaption></figure>
+        </div>
+      </div>
+      <div>
+        <div class="row-label"><h4>У лица</h4><span>Свитера, блузы, платья, шарфы</span></div>
+        <div class="swatches">
+          <figure class="sw"><div class="chip-c" style="background:#B5573B"></div><figcaption>Терракота<code>#B5573B</code></figcaption></figure>
+          <figure class="sw"><div class="chip-c" style="background:#A23B2C"></div><figcaption>Кирпичный<code>#A23B2C</code></figcaption></figure>
+          <figure class="sw"><div class="chip-c" style="background:#C86F64"></div><figcaption>Пыльная роза<code>#C86F64</code></figcaption></figure>
+          <figure class="sw"><div class="chip-c" style="background:#E3A182"></div><figcaption>Персик<code>#E3A182</code></figcaption></figure>
+          <figure class="sw"><div class="chip-c" style="background:#2F5D46"></div><figcaption>Бутылочный зелёный<code>#2F5D46</code></figcaption></figure>
+          <figure class="sw"><div class="chip-c" style="background:#1F5C5B"></div><figcaption>Тил<code>#1F5C5B</code></figcaption></figure>
+          <figure class="sw"><div class="chip-c" style="background:#6B2333"></div><figcaption>Бордо-вишня<code>#6B2333</code></figcaption></figure>
+        </div>
+      </div>
+      <div>
+        <div class="row-label"><h4>Акценты</h4><span>Сумка, перчатки, берет, принт</span></div>
+        <div class="swatches">
+          <figure class="sw"><div class="chip-c" style="background:#C99A2E"></div><figcaption>Горчица<code>#C99A2E</code></figcaption></figure>
+          <figure class="sw"><div class="chip-c" style="background:#9C4A22"></div><figcaption>Ржавчина<code>#9C4A22</code></figcaption></figure>
+          <figure class="sw"><div class="chip-c" style="background:#5E5B32"></div><figcaption>Тёмная олива<code>#5E5B32</code></figcaption></figure>
+        </div>
+      </div>
+      <div class="avoid">
+        <div class="row-label"><h4>Не у лица</h4><span>Гасят или спорят с лицом. Ниже пояса можно.</span></div>
+        <div class="swatches">
+          <figure class="sw"><div class="chip-c" style="background:#FF6A00"></div><figcaption>Неоновый оранжевый<code>#FF6A00</code></figcaption></figure>
+          <figure class="sw"><div class="chip-c" style="background:#F6EDB0"></div><figcaption>Бледно-жёлтый<code>#F6EDB0</code></figcaption></figure>
+          <figure class="sw"><div class="chip-c" style="background:#E5C3A6"></div><figcaption>Нюд<code>#E5C3A6</code></figcaption></figure>
+          <figure class="sw"><div class="chip-c" style="background:#B8AFA3"></div><figcaption>Серо-бежевый<code>#B8AFA3</code></figcaption></figure>
+          <figure class="sw"><div class="chip-c" style="background:#D6EAF8"></div><figcaption>Ледяной голубой<code>#D6EAF8</code></figcaption></figure>
+          <figure class="sw"><div class="chip-c" style="background:#F7B6D2"></div><figcaption>Холодный розовый<code>#F7B6D2</code></figcaption></figure>
+          <figure class="sw"><div class="chip-c" style="background:#E0218A"></div><figcaption>Фуксия<code>#E0218A</code></figcaption></figure>
+          <figure class="sw"><div class="chip-c" style="background:#BFC3C7"></div><figcaption>Светлый серый меланж<code>#BFC3C7</code></figcaption></figure>
+        </div>
+      </div>
+      <p class="check"><strong>Проверить дома за 10 минут.</strong> У окна днём, без макияжа, волосы под белым полотенцем. Приложить к лицу по очереди: золото и серебро, слоновую кость и белый, шоколад и чёрный, терракоту и фуксию. Если в трёх парах из четырёх лучше первый цвет, палитра верна. Если второй, тип ближе к тёмной зиме: терракоту и горчицу заменить на бордо и сапфир.</p>
+    </div>
+  </section>
+
+  <section class="rules">
+    <h2>Шесть правил</h2>
+    <ul>
+      <li><b>Талия всегда отмечена.</b> Пояс на пуховике и пальто, платье с запахом, свитер заправлен спереди. Без этого фигура пропадает.</li>
+      <li><b>Объём только в одной зоне.</b> Крупный свитер с узкой или струящейся юбкой. Широкие брюки с облегающим верхом.</li>
+      <li><b>У лица глубокий тёплый цвет.</b> Терракота, бордо, бутылочный зелёный или слоновая кость. Бледно-жёлтый и нюд убрать от лица.</li>
+      <li><b>Длины.</b> Юбки миди до середины икры, брюки в пол до середины каблука. Край юбки перекрывает сапог на 3–5 см.</li>
+      <li><b>Обувь для прогулок.</b> Устойчивый каблук 3–6 см или трактор 3–4 см, нос мягко скруглённый. Кеды оставить для спорта.</li>
+      <li><b>Детали среднего размера.</b> Серьги-капли и кольца 2–3 см из тёплого золота, барочный жемчуг. Мелкие гвоздики теряются на фоне тёмных волос.</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="sec-head"><h2>Прогулки</h2><span class="count">каждый день · −5…−15 °C</span></div>
+    <div class="looks">
+      <div class="intro">
+        <p class="eyebrow">Принцип</p>
+        <p>Длинный пуховик без пояса превращается в спальный мешок и съедает рост. С широким кожаным поясом он становится пальто с талией.</p>
+        <p>Цвет даёт шарф: это самая дешёвая вещь в образе и при этом единственная, что видна у лица всю прогулку.</p>
+      </div>
+      <article class="look">
+        <figure class="photo"><img src="img/1.jpg" alt="Эльвира идёт по заснеженному бульвару в длинном шоколадном пуховике с поясом, кремовой водолазке, клетчатом кремово-карамельном палантине, широких брюках кэмел и коричневых сапогах" width="796" height="1200"><span class="num">1</span><figcaption>Бульвар · −5…−15 °C</figcaption></figure>
+        <div class="body">
+          <div><h3>Коричневый пуховик с поясом</h3><p class="occasion">Прогулка с ребёнком, дела по городу.</p></div>
+          <ul class="items">
+            <li><i class="dot" style="background:#4E342E"></i><span>Длинный коричневый пуховик, на поясе <span class="own">ваш</span></span></li>
+            <li><i class="dot" style="background:#F3EBDD"></i><span>Водолазка цвета слоновой кости, кашемир</span></li>
+            <li><i class="dot" style="background:#C9A27A"></i><span>Палантин в клетку кость и карамель, или терракотовый</span></li>
+            <li><i class="dot" style="background:#B5835A"></i><span>Широкие шерстяные брюки кэмел в пол</span></li>
+            <li><i class="dot" style="background:#3B2A22"></i><span>Сапоги до колена, каблук 5 см, перчатки</span></li>
+          </ul>
+          <p class="why"><strong>Почему работает.</strong> Шоколад, кость и кэмел, это ваша база. Пояс собирает силуэт, светлое у лица освещает его.</p>
+        </div>
+      </article>
+      <article class="look">
+        <figure class="photo"><img src="img/2b.jpg" alt="Эльвира в заснеженном парке в длинном тёмно-синем пуховике, застёгнутом и перехваченном коричневым кожаным поясом, с бордовым шарфом и водолазкой, коричневой сумкой через плечо и сапогами на каблуке" width="796" height="1200"><span class="num">2</span><figcaption>Парк · −5…−15 °C</figcaption></figure>
+        <div class="body">
+          <div><h3>Синий пуховик и бордо</h3><p class="occasion">Долгая прогулка, парк, детская площадка.</p></div>
+          <ul class="items">
+            <li><i class="dot" style="background:#2B3A4F"></i><span>Длинный синий пуховик, застёгнут <span class="own">ваш</span></span></li>
+            <li><i class="dot" style="background:#4E342E"></i><span>Широкий кожаный пояс шоколадного цвета</span></li>
+            <li><i class="dot" style="background:#6B2333"></i><span>Бордовые кашемировые водолазка и шарф</span></li>
+            <li><i class="dot" style="background:#3B2A22"></i><span>Юбка-миди шоколад, сапоги на каблуке 5 см</span></li>
+            <li><i class="dot" style="background:#9C5A32"></i><span>Сумка через плечо цвета коньяка, варежки кость</span></li>
+          </ul>
+          <p class="why"><strong>Почему работает.</strong> Бордо у лица делает синий тёплым и углубляет карие глаза. Если ваш пуховик ярко-васильковый, шарф обязателен.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><h2>Город и музей</h2><span class="count">сухие дни, выставки, кафе</span></div>
+    <div class="looks">
+      <div class="intro">
+        <p class="eyebrow">Принцип</p>
+        <p>Дублёнка короче пуховика, поэтому под ней видно платье. Трикотажное миди по фигуре, это самый простой женственный образ, который при этом греет.</p>
+        <p>В музее верхняя одежда в гардеробе, и образ держится на жакете. Ваш кремовый пиджак уже идеален по цвету, нужен только тёплый слой под ним.</p>
+      </div>
+      <article class="look">
+        <figure class="photo"><img src="img/3.jpg" alt="Эльвира на старой московской улице в короткой коричневой дублёнке со светлым воротником, облегающем трикотажном платье-миди цвета карамели и коричневых сапогах, с маленькой коньячной сумкой" width="796" height="1200"><span class="num">3</span><figcaption>Город · сухо, мороз</figcaption></figure>
+        <div class="body">
+          <div><h3>Дублёнка и трикотажное платье</h3><p class="occasion">Прогулка по центру, кафе, встреча с подругами.</p></div>
+          <ul class="items">
+            <li><i class="dot" style="background:#5A3E2E"></i><span>Короткая дублёнка <span class="own">ваша</span></span></li>
+            <li><i class="dot" style="background:#A86F48"></i><span>Трикотажное платье-миди в рубчик, карамель</span></li>
+            <li><i class="dot" style="background:#3B2A22"></i><span>Сапоги до колена, каблук 5 см</span></li>
+            <li><i class="dot" style="background:#9C5A32"></i><span>Маленькая сумка цвета коньяка, перчатки</span></li>
+          </ul>
+          <p class="why"><strong>Почему работает.</strong> Платье по фигуре и короткий верх показывают талию. Мех у лица смягчает. Оттенок дублёнки на кадре условный.</p>
+        </div>
+      </article>
+      <article class="look">
+        <figure class="photo"><img src="img/4.jpg" alt="Эльвира в светлом музейном зале в кремовом двубортном пиджаке, шоколадном джемпере с V-вырезом, широких кремовых брюках и замшевых лоферах" width="796" height="1200"><span class="num">4</span><figcaption>Музей · внутри</figcaption></figure>
+        <div class="body">
+          <div><h3>Ваш кремовый пиджак</h3><p class="occasion">Музей, выставка, обед в городе.</p></div>
+          <ul class="items">
+            <li><i class="dot" style="background:#F3EBDD"></i><span>Кремовый двубортный пиджак в полоску <span class="own">ваш</span></span></li>
+            <li><i class="dot" style="background:#4E342E"></i><span>Шоколадный кашемировый джемпер с V-вырезом</span></li>
+            <li><i class="dot" style="background:#EDE3D2"></i><span>Широкие брюки кость в пол, высокая посадка</span></li>
+            <li><i class="dot" style="background:#A0826D"></i><span>Замшевые лоферы <span class="own">ваши</span>, золотая цепочка</span></li>
+          </ul>
+          <p class="why"><strong>Почему работает.</strong> Ваш летний образ, переведённый в зиму: тот же шоколад с костью, только кашемир вместо майки. Пиджак носить расстёгнутым: так видна линия талии.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><h2>Вечер</h2><span class="count">ресторан, театр, праздник</span></div>
+    <div class="looks">
+      <div class="intro">
+        <p class="eyebrow">Принцип</p>
+        <p>Вечером работает один глубокий цвет на всю площадь: бутылочный зелёный или терракота. Это ваши сильные цвета, и на них лучше всего видны карие глаза.</p>
+        <p>Шёлк и тонкий трикотаж с запахом или поясом дают женственность без корсетов и шпилек. Каблук всё тот же, 5 см.</p>
+      </div>
+      <article class="look">
+        <figure class="photo"><img src="img/5b.jpg" alt="Эльвира в ресторане с тёплым светом в бутылочно-зелёном шёлковом платье-миди с запахом и длинными рукавами, с маленьким коричневым клатчем и туфлями на невысоком каблуке" width="796" height="1200"><span class="num">5</span><figcaption>Ресторан · вечер</figcaption></figure>
+        <div class="body">
+          <div><h3>Зелёный шёлк с запахом</h3><p class="occasion">Ужин, годовщина, театр.</p></div>
+          <ul class="items">
+            <li><i class="dot" style="background:#2F5D46"></i><span>Шёлковое платье-миди с запахом, бутылочный зелёный</span></li>
+            <li><i class="dot" style="background:#3B2A22"></i><span>Замшевые лодочки шоколад, каблук 5 см</span></li>
+            <li><i class="dot" style="background:#4E342E"></i><span>Маленький клатч</span></li>
+            <li><i class="dot" style="background:#C9A55C"></i><span>Серьги-капли и тонкая цепочка, тёплое золото</span></li>
+          </ul>
+          <p class="why"><strong>Почему работает.</strong> Запах отмечает талию и даёт V-вырез, который вытягивает шею. Зелёный подчёркивает карие глаза.</p>
+        </div>
+      </article>
+      <article class="look">
+        <figure class="photo"><img src="img/6b.jpg" alt="Эльвира у входа в ресторан вечером в длинном пальто кэмел нараспашку, терракотовом трикотажном платье-миди с тонким поясом, шарфе цвета слоновой кости и замшевых сапогах" width="796" height="1200"><span class="num">6</span><figcaption>Вечер · −5 °C, снег</figcaption></figure>
+        <div class="body">
+          <div><h3>Пальто кэмел и терракота</h3><p class="occasion">Ресторан, гости, прогулка по праздничному центру.</p></div>
+          <ul class="items">
+            <li><i class="dot" style="background:#B5835A"></i><span>Длинное пальто-халат кэмел, шерсть</span></li>
+            <li><i class="dot" style="background:#B5573B"></i><span>Трикотажное платье-миди терракота, тонкий пояс</span></li>
+            <li><i class="dot" style="background:#F3EBDD"></i><span>Кашемировый шарф цвета слоновой кости</span></li>
+            <li><i class="dot" style="background:#3B2A22"></i><span>Замшевые сапоги до колена, каблук 5 см</span></li>
+          </ul>
+          <p class="why"><strong>Почему работает.</strong> Терракота, самый «ваш» цвет из палитры, на кэмеле смотрится тепло и дорого. Слоновая кость у лица мягче белого.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><h2>Утро и кафе</h2><span class="count">завтрак, кофе с подругой</span></div>
+    <div class="looks">
+      <div class="intro">
+        <p class="eyebrow">Принцип</p>
+        <p>Утром женственность тише: мягкий кардиган вместо платья, но заправленный и с поясом, чтобы была талия. Пушистая фактура у лица и есть главный акцент.</p>
+        <p>Верхнюю одежду берите любую из прогулочных: пуховик с поясом или дублёнку. Внутри кафе видно только то, что под ней.</p>
+      </div>
+      <article class="look">
+        <figure class="photo"><img src="img/k1.jpg" alt="Эльвира в светлом кафе у окна в пушистом кардигане цвета слоновой кости, заправленном в широкие шоколадные брюки в пол с коньячным поясом, в замшевых лоферах и с сумкой через плечо" width="796" height="1200"><span class="num">7</span><figcaption>Кафе · утро</figcaption></figure>
+        <div class="body">
+          <div><h3>Кардиган и брюки эспрессо</h3><p class="occasion">Завтрак, кофе, утренние дела по городу.</p></div>
+          <ul class="items">
+            <li><i class="dot" style="background:#F3EBDD"></i><span>Мохеровый кардиган слоновой кости с V-вырезом, заправлен</span></li>
+            <li><i class="dot" style="background:#3B2A22"></i><span>Широкие шерстяные брюки эспрессо в пол</span></li>
+            <li><i class="dot" style="background:#9C5A32"></i><span>Тонкий коньячный пояс и сумка через плечо</span></li>
+            <li><i class="dot" style="background:#A0826D"></i><span>Замшевые лоферы <span class="own">ваши</span>, золотые кольца-серьги</span></li>
+          </ul>
+          <p class="why"><strong>Почему работает.</strong> Объём только сверху и мягкий, низ ровный и длинный. Пояс держит талию, светлое у лица освещает.</p>
+        </div>
+      </article>
+      <article class="look">
+        <figure class="photo"><img src="img/k2.jpg" alt="Эльвира в пекарне с чашкой кофе в тёмно-бирюзовом кардигане с запахом и поясом, атласной юбке-миди цвета слоновой кости и шоколадных сапогах, на стуле за ней короткая дублёнка" width="796" height="1200"><span class="num">8</span><figcaption>Кафе · утро</figcaption></figure>
+        <div class="body">
+          <div><h3>Тил и атлас</h3><p class="occasion">Кофе с подругой, бранч в выходной.</p></div>
+          <ul class="items">
+            <li><i class="dot" style="background:#1F5C5B"></i><span>Кардиган с запахом цвета тил, тонкий трикотаж</span></li>
+            <li><i class="dot" style="background:#F3EBDD"></i><span>Атласная юбка-миди по косой, слоновая кость</span></li>
+            <li><i class="dot" style="background:#3B2A22"></i><span>Сапоги до колена на каблуке 5 см</span></li>
+            <li><i class="dot" style="background:#EDE3D2"></i><span>Серьги с барочным жемчугом, короткая дублёнка <span class="own">ваша</span></span></li>
+          </ul>
+          <p class="why"><strong>Почему работает.</strong> Запах даёт талию и V-вырез, тил подчёркивает карие глаза. Атлас днём выглядит женственно, а сапоги делают его повседневным.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><h2>Причёски</h2><span class="count">на ту же стрижку, без смены длины</span></div>
+    <div class="hair">
+      <figure>
+        <div class="ph"><img src="img/p1.jpg" alt="Портрет Эльвиры с мягким низким пучком, чёлкой-шторкой и выпущенными прядями у лица, в кремовом свитере и золотых серьгах" width="895" height="1200"></div>
+        <figcaption><i>Каждый день</i><b>Низкий пучок с прядями</b>Под шапку и капюшон. Пряди у скул оставлять обязательно: гладкий пучок без них делает лицо круглее.</figcaption>
+      </figure>
+      <figure>
+        <div class="ph"><img src="img/p2.jpg" alt="Портрет Эльвиры с глянцевыми голливудскими волнами на боковой пробор, в бордовой шёлковой блузе" width="895" height="1200"></div>
+        <figcaption><i>Вечер</i><b>Голливудская волна</b>Глубокий боковой пробор, волны на одно плечо. К шёлковому платью и бордо, образы 5 и 6.</figcaption>
+      </figure>
+      <figure>
+        <div class="ph"><img src="img/p3.jpg" alt="Эльвира вполоборота с причёской полураспущенные волосы, верх собран шоколадным бархатным бантом, в кремовом кардигане" width="895" height="1200"></div>
+        <figcaption><i>Кафе, музей</i><b>Полухвост с бантом</b>Самая романтичная из четырёх. Бархатный бант в шоколаде или бордо, волосы в мягкой волне.</figcaption>
+      </figure>
+      <figure>
+        <div class="ph"><img src="img/p4.jpg" alt="Портрет Эльвиры с объёмной укладкой в стиле 90-х, пряди завиты от лица, в терракотовой водолазке и золотых серьгах-кольцах" width="895" height="1200"></div>
+        <figcaption><i>Праздник, фото</i><b>Укладка 90-х</b>Объём у корней, концы от лица, шторка на стороны. Брашинг за 20 минут, держится весь день.</figcaption>
+      </figure>
+    </div>
+    <p class="note">Кадры сгенерированы по вашим фотографиям. Лицо и посадка приблизительные, оттенки ваших пуховиков и дублёнки на кадрах условные. Часть впечатления дают фон и свет.</p>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <h2>Купить этой зимой</h2>
+      <span class="count" id="count">Куплено 0 из 18</span>
+    </div>
+    <div class="tiers">
+      <div class="tier">
+        <h4>Сначала, недорого</h4>
+        <p>Меняют то, что уже есть: пуховики становятся женственными.</p>
+        <label class="buy"><input type="checkbox" id="b-belt" data-id="belt"><span><span class="t"><i class="dot" style="background:#4E342E"></i><span class="name">Широкий кожаный пояс</span><span class="chip">1</span><span class="chip">2</span></span><small>Шоколад, 4–5 см, на оба пуховика и пальто.</small></span></label>
+        <label class="buy"><input type="checkbox" id="b-scarf-b" data-id="scarf-b"><span><span class="t"><i class="dot" style="background:#6B2333"></i><span class="name">Бордовый кашемировый шарф</span><span class="chip">2</span></span><small>К синему пуховику.</small></span></label>
+        <label class="buy"><input type="checkbox" id="b-scarf-t" data-id="scarf-t"><span><span class="t"><i class="dot" style="background:#B5573B"></i><span class="name">Терракотовый шарф или палантин</span><span class="chip">1</span><span class="chip">3</span></span><small>К коричневому пуховику и дублёнке.</small></span></label>
+        <label class="buy"><input type="checkbox" id="b-boots" data-id="boots"><span><span class="t"><i class="dot" style="background:#3B2A22"></i><span class="name">Сапоги до колена</span><span class="chip">все</span></span><small>Шоколад, кожа или замша с пропиткой, устойчивый каблук 5 см, нескользкая подошва. Главная покупка.</small></span></label>
+        <label class="buy"><input type="checkbox" id="b-ear" data-id="earrings"><span><span class="t"><i class="dot" style="background:#C9A55C"></i><span class="name">Серьги-капли и кольца 2–3 см</span><span class="chip">все</span></span><small>Тёплое золото, можно с барочным жемчугом.</small></span></label>
+        <label class="buy"><input type="checkbox" id="b-bow" data-id="bow"><span><span class="t"><i class="dot" style="background:#4E342E"></i><span class="name">Бархатный бант для волос</span><span class="chip">причёски</span></span><small>Шоколад или бордо, на заколке.</small></span></label>
+      </div>
+      <div class="tier">
+        <h4>Основа под верхнюю одежду</h4>
+        <p>То, что видно в помещении. Кашемир и тонкая шерсть.</p>
+        <label class="buy"><input type="checkbox" id="b-tn" data-id="turtlenecks"><span><span class="t"><i class="dot" style="background:#F3EBDD"></i><span class="name">Две водолазки</span><span class="chip">1</span><span class="chip">2</span></span><small>Слоновая кость и бордо, тонкий кашемир или меринос.</small></span></label>
+        <label class="buy"><input type="checkbox" id="b-v" data-id="vneck"><span><span class="t"><i class="dot" style="background:#4E342E"></i><span class="name">Шоколадный джемпер с V-вырезом</span><span class="chip">4</span></span><small>Под кремовый пиджак, заправлять спереди.</small></span></label>
+        <label class="buy"><input type="checkbox" id="b-dress-c" data-id="dress-caramel"><span><span class="t"><i class="dot" style="background:#A86F48"></i><span class="name">Трикотажное платье-миди</span><span class="chip">3</span></span><small>Карамель или шоколад, в рубчик, по фигуре.</small></span></label>
+        <label class="buy"><input type="checkbox" id="b-skirt" data-id="skirt"><span><span class="t"><i class="dot" style="background:#3B2A22"></i><span class="name">Юбка-миди шоколад</span><span class="chip">2</span></span><small>Шерсть или трикотаж, прямая или по косой.</small></span></label>
+        <label class="buy"><input type="checkbox" id="b-trousers" data-id="trousers"><span><span class="t"><i class="dot" style="background:#B5835A"></i><span class="name">Широкие брюки в пол</span><span class="chip">1</span><span class="chip">4</span></span><small>Кэмел, кость или эспрессо, высокая посадка, длина до середины каблука.</small></span></label>
+        <label class="buy"><input type="checkbox" id="b-mohair" data-id="mohair"><span><span class="t"><i class="dot" style="background:#F3EBDD"></i><span class="name">Мохеровый кардиган</span><span class="chip">7</span></span><small>Слоновая кость, V-вырез, носить заправленным.</small></span></label>
+        <label class="buy"><input type="checkbox" id="b-wrap" data-id="wrap"><span><span class="t"><i class="dot" style="background:#1F5C5B"></i><span class="name">Кардиган с запахом</span><span class="chip">8</span></span><small>Тил или бутылочный зелёный, тонкий трикотаж.</small></span></label>
+      </div>
+      <div class="tier">
+        <h4>Для выхода</h4>
+        <p>Вечерние вещи. По одной, когда будет повод.</p>
+        <label class="buy"><input type="checkbox" id="b-dress-t" data-id="dress-terracotta"><span><span class="t"><i class="dot" style="background:#B5573B"></i><span class="name">Терракотовое платье-миди</span><span class="chip">6</span></span><small>Тонкий трикотаж, мягкий V-вырез, с поясом.</small></span></label>
+        <label class="buy"><input type="checkbox" id="b-silk" data-id="silk"><span><span class="t"><i class="dot" style="background:#2F5D46"></i><span class="name">Шёлковое платье с запахом</span><span class="chip">5</span></span><small>Бутылочный зелёный, длинный рукав, миди.</small></span></label>
+        <label class="buy"><input type="checkbox" id="b-satin" data-id="satin"><span><span class="t"><i class="dot" style="background:#EDE3D2"></i><span class="name">Атласная юбка-миди</span><span class="chip">8</span></span><small>По косой, слоновая кость или шоколад. Днём с сапогами, вечером с лодочками.</small></span></label>
+        <label class="buy"><input type="checkbox" id="b-coat" data-id="coat"><span><span class="t"><i class="dot" style="background:#B5835A"></i><span class="name">Пальто-халат кэмел</span><span class="chip">6</span></span><small>Шерсть с кашемиром, с поясом, ниже колена. На сухие дни до −5 °C.</small></span></label>
+        <label class="buy"><input type="checkbox" id="b-pumps" data-id="pumps"><span><span class="t"><i class="dot" style="background:#3B2A22"></i><span class="name">Замшевые лодочки</span><span class="chip">5</span></span><small>Шоколад, каблук 5 см, скруглённый нос.</small></span></label>
+      </div>
+    </div>
+  </section>
+
+  <section class="rules">
+    <h2>Из вашего шкафа</h2>
+    <ul>
+      <li><b>Короткая дублёнка.</b> Оставить. Носить с платьем или юбкой-миди и сапогами, образ 3.</li>
+      <li><b>Коричневый пуховик.</b> Цвет в палитре. Добавить пояс и тёплый шарф, образ 1.</li>
+      <li><b>Синий пуховик.</b> Оставить с поясом. У лица всегда бордо или кость, образ 2.</li>
+      <li><b>Кремовый пиджак в полоску.</b> Лучшая вещь в шкафу. Зимой с кашемиром, образ 4.</li>
+      <li><b>Замшевые лоферы.</b> На сухие дни и в помещение.</li>
+      <li><b>Юбка-миди в цветы и персиковая блузка.</b> Ваши самые женственные летние вещи. Вернутся в мае.</li>
+      <li><b>Флисовая куртка и спортивное.</b> Для дачи и площадки, не для города.</li>
+      <li><b>Бледно-жёлтые и нюдовые футболки.</b> Носить только под пиджак или кардиган, не у лица открыто.</li>
+    </ul>
+  </section>
+
+  <section class="rules">
+    <h2>Без покупок, уже завтра</h2>
+    <ul>
+      <li><b>Подпоясать пуховик.</b> Любым кожаным поясом, который есть дома.</li>
+      <li><b>Заправить свитер спереди.</b> Сразу появляется талия.</li>
+      <li><b>Брюки в пол.</b> Укороченные широкие брюки отложить до лета или подшить с каблуком.</li>
+      <li><b>Кеды заменить на ботинки</b> в любом образе с юбкой или платьем.</li>
+      <li><b>Стрижку не менять.</b> Нынешние слои и шторка подходят идеально.</li>
+      <li><b>Сделать проверку палитры</b> у окна, это 10 минут.</li>
+    </ul>
+  </section>
+</div>
+
+<script>
+  (function () {
+    var KEY = "elvira-winter-v1-bought";
+    var boxes = Array.prototype.slice.call(document.querySelectorAll(".buy input"));
+    var count = document.getElementById("count");
+    var saved = {};
+    try { saved = JSON.parse(localStorage.getItem(KEY) || "{}") || {}; } catch (e) { saved = {}; }
+    function refresh() {
+      var n = boxes.filter(function (b) { return b.checked; }).length;
+      count.textContent = "Куплено " + n + " из " + boxes.length;
+    }
+    boxes.forEach(function (b) {
+      b.checked = !!saved[b.dataset.id];
+      b.addEventListener("change", function () {
+        saved[b.dataset.id] = b.checked;
+        try { localStorage.setItem(KEY, JSON.stringify(saved)); } catch (e) {}
+        refresh();
+      });
+    });
+    refresh();
+  })();
+</script>
+
+</body>
+</html>
